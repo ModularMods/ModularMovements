@@ -1,0 +1,16 @@
+[
+{
+  "modid": "modularmovements",
+  "name": "ModularMovements",
+  "description": "ModularMovements",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["mchhui", "siz_stan", "Protoxy"],
+  "credits": "The Forge and FML guys, for making this example",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

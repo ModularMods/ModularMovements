@@ -47,6 +47,7 @@ public class TacticalHandler {
                 float blockAngle = buffer.readFloat();
                 float sitCooldown = buffer.readFloat();
                 float crawlCooldown = buffer.readFloat();
+                float slideForce = buffer.readFloat();
 
                 ModularMovements.CONFIG.lean.withGunsOnly = withGunsOnly;
                 ModularMovements.CONFIG.slide.maxForce = slideMaxForce;
@@ -54,6 +55,7 @@ public class TacticalHandler {
                 ModularMovements.CONFIG.crawl.blockAngle = blockAngle;
                 ModularMovements.CONFIG.cooldown.sitCooldown = sitCooldown;
                 ModularMovements.CONFIG.cooldown.crawlCooldown = crawlCooldown;
+                ModularMovements.CONFIG.slide.maxForce = slideForce;
                 break;
         }
     }
@@ -138,6 +140,7 @@ public class TacticalHandler {
         buffer.writeFloat(ModularMovements.CONFIG.crawl.blockAngle);
         buffer.writeFloat(ModularMovements.CONFIG.cooldown.sitCooldown);
         buffer.writeFloat(ModularMovements.CONFIG.cooldown.crawlCooldown);
+        buffer.writeFloat(ModularMovements.CONFIG.slide.maxForce);
         ModularMovements.channel.sendTo(new FMLProxyPacket(buffer, "modularmovements"), entityPlayer);
     }
 

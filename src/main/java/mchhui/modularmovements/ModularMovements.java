@@ -33,7 +33,7 @@ public class ModularMovements {
 
     public static final String MOD_ID = "modularmovements";
     public static final String MOD_NAME = "ModularMovements";
-    public static final String MOD_VERSION = "1.0.3f";
+    public static final String MOD_VERSION = "1.1.1f";
 
     @Mod.Instance("modularmovements")
     public static ModularMovements INSTANCE;

@@ -1,8 +1,8 @@
 package mchhui.modularmovements.tactical.client;
 
-import com.modularwarfare.client.fpp.basic.models.layers.RenderLayerBackpack;
-import com.modularwarfare.client.fpp.basic.models.layers.RenderLayerBody;
-import com.modularwarfare.client.fpp.basic.models.layers.RenderLayerHeldGun;
+import com.modularwarfare.client.model.layers.RenderLayerBackpack;
+import com.modularwarfare.client.model.layers.RenderLayerBody;
+import com.modularwarfare.client.model.layers.RenderLayerHeldGun;
 import mchhui.modularmovements.ModularMovements;
 import net.minecraft.client.entity.AbstractClientPlayer;
 import net.minecraft.client.renderer.entity.RenderManager;

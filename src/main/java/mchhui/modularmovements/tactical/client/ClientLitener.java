@@ -92,6 +92,8 @@ public class ClientLitener {
 
     private static Field speedInAir;
 
+    public int lastCode = 0;
+    
     @SubscribeEvent
     public void onTickClient(ClientTickEvent event) {
         if (event.phase == Phase.START) {
@@ -784,7 +786,14 @@ public class ClientLitener {
                 TacticalHandler.sendNoFall();
             }
         }
-        TacticalHandler.sendToServer(clientPlayerState.writeCode());
+        /**
+         * Check if the state code has changed, and send a packet to the server
+         */
+        final int code = clientPlayerState.writeCode();
+        if(code != lastCode){
+            TacticalHandler.sendToServer(clientPlayerState.writeCode());
+            lastCode = code;
+        }
     }
 
     public static boolean isSitting(Integer id) {

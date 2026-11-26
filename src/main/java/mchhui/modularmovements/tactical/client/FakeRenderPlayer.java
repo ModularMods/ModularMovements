@@ -25,8 +25,9 @@ public class FakeRenderPlayer extends RenderPlayer {
                 break;
             }
         }
+		// re-add replacement armor
+        this.addLayer(new FakeLayerBipedArmor(this));
         if (ModularMovements.mwfEnable) {
-            this.addLayer(new FakeLayerBipedArmor(this));
             this.addLayer(new RenderLayerBackpack(this, this.getMainModel().bipedBodyWear));
             this.addLayer(new RenderLayerBody(this, this.getMainModel().bipedBodyWear));
             this.addLayer(new RenderLayerHeldGun(this));

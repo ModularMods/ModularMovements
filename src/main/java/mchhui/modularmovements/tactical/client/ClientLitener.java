@@ -470,10 +470,12 @@ public class ClientLitener {
         }
         float pitch = event.getPitch();
         float yaw = event.getYaw();
+        float roll = event.getRoll();
         event.setPitch(0);
         event.setYaw(0);
         event.setRoll(0);
-        GlStateManager.rotate(10 * cameraProbeOffset, 0.0F, 0.0F, 1.0F);
+        // keep roll set by other mods (e.g. drone cameras) instead of discarding it
+        GlStateManager.rotate(roll + 10 * cameraProbeOffset, 0.0F, 0.0F, 1.0F);
         GlStateManager.rotate(pitch, 1.0F, 0.0F, 0.0F);
         GlStateManager.translate(0, -cameraOffsetY, 0);
         GlStateManager.translate(-0.6 * cameraProbeOffset, 0, 0);
